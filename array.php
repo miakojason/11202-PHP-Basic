@@ -32,6 +32,6 @@ print_r($c);
 echo "</pre>";
 
 echo $c['name'];
-echo  $c['興趣'][0];
+echo $c['興趣'][0];
 echo $c['興趣'][2];
 ?> 

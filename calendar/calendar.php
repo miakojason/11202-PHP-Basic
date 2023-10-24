@@ -33,7 +33,7 @@ $thisFirstDate=date('w',strtotime($thisFirstDay));//這一行的目的是獲取 
 $thisMonthDays=date("t");//這是當前月份的總天數，是透過 date("t") 取得的。
 $thisLastDay=date("Y-m-$thisMonthDays");//這一行的目的是獲取當前月份的最後一天的日期。這是透過將 "Y-m-" 字串和 $thisMonthDays 組合而成的。
 $weeks=ceil(($thisMonthDays+$thisFirstDate)/7);  // 這行程式碼的目的是計算當前月份應該顯示的週數。 這是通過將總天數加上第一天是星期幾的數字，然後除以 7（一周有 7 天）來實現的。ceil 函式則確保取得的週數是無條件進位的。                                       
-$firstCell=date("Y-m-d",strtotime("-$thisFirstDate days",strtotime($thisFirstDay)));//這一行程式碼的目的是計算出當前月份的第一天，然後根據星期幾將日期回溯到上個月的最後一週的星期日，以確保月曆表格的第一格顯示的是上個月的日期。這樣做是為了填充月曆表格的第一列，因為每個月的第一天不一定是星期日，有可能是星期一至星期六。
+$firstCell=date("Y-m-d",strtotime("-$thisFirstDate days",strtotime($thisFirstDay)));
 echo "<table>";                              
 echo "<tr>";                                 
 echo "<td>日</td >";                        
